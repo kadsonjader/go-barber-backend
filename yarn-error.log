@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/Cellar/node@12/12.14.1_1/bin/node /usr/local/Cellar/yarn/1.21.1/libexec/bin/yarn.js add bcrypt.js
+  /usr/local/Cellar/node@12/12.14.1_1/bin/node /usr/local/Cellar/yarn/1.21.1/libexec/bin/yarn.js add jasonwebtoken
 
 PATH: 
   /usr/local/opt/node@12/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/bcrypt.js: Not found
+  Error: https://registry.yarnpkg.com/jasonwebtoken: Not found
       at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.21.1/libexec/lib/cli.js:66947:18)
       at Request.self.callback (/usr/local/Cellar/yarn/1.21.1/libexec/lib/cli.js:140665:22)
       at Request.emit (events.js:223:5)
@@ -37,6 +37,7 @@ npm manifest:
       "dev:debug": "nodemon --inspect src/server.js"
     },
     "dependencies": {
+      "bcryptjs": "^2.4.3",
       "express": "^4.17.1",
       "pg": "^7.18.1",
       "pg-hstore": "^2.3.3",
@@ -312,6 +313,11 @@ Lockfile:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
     integrity sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
+  
+  bcryptjs@^2.4.3:
+    version "2.4.3"
+    resolved "https://registry.yarnpkg.com/bcryptjs/-/bcryptjs-2.4.3.tgz#9ab5627b93e60621ff7cdac5da9733027df1d0cb"
+    integrity sha1-mrVie5PmBiH/fNrF2pczAn3x0Ms=
   
   binary-extensions@^2.0.0:
     version "2.0.0"
