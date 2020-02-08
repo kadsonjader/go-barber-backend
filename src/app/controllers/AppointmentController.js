@@ -50,8 +50,12 @@ class AppointmentController {
     /**
      * verificar se o provider_id é um prestador de serviço
      */
+    if (provider_id === req.userId){
+      return res.status(406).json({ error: 'não pode criar um compromisso para você mesmo' })
+    }
+
     const isProvider = await User.findOne({
-      where: { id: provider_id, provider: true },
+      where: { id: provider_id, provider: true  },
     });
 
     const hourStart = startOfHour(parseISO(date));
